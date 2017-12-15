@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - "lts/*"
+
+branches:
+  only:
+    - master
+    - develop
+    - /feature\/*/
+
+notifications:
+ slack:
+   rooms:
+     - edu-connect:Rurv5WxxeDgRZ8oi9JWHogQQ#fe_github
+
+install:
+  - yarn
+
+script:
+  - eslint .
+  - yarn test
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then sh -x ./deploy.sh; fi
