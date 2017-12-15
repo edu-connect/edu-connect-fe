@@ -1,4 +1,4 @@
-"use strict";
+
 
 const path = require("path");
 const fs = require("fs");
@@ -17,9 +17,9 @@ function ensureSlash(path, needsSlash) {
     return path.substr(path, path.length - 1);
   } else if (!hasSlash && needsSlash) {
     return `${path}/`;
-  } else {
+  } 
     return path;
-  }
+  
 }
 
 const getPublicUrl = appPackageJson =>
@@ -51,5 +51,6 @@ module.exports = {
   testsSetup: resolveApp("src/setupTests.js"),
   appNodeModules: resolveApp("node_modules"),
   publicUrl: getPublicUrl(resolveApp("package.json")),
-  servedPath: getServedPath(resolveApp("package.json"))
+  servedPath: getServedPath(resolveApp("package.json")),
+  styles: resolveApp("src/styles"),
 };
