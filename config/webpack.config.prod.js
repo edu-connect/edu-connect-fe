@@ -1,5 +1,3 @@
-
-
 const autoprefixer = require("autoprefixer");
 const path = require("path");
 const webpack = require("webpack");
@@ -148,6 +146,7 @@ module.exports = {
             loader: require.resolve("babel-loader"),
             options: {
               compact: true,
+              plugins: ["transform-decorators-legacy"],
             },
           },
           // The notation here is somewhat confusing.
@@ -313,7 +312,7 @@ module.exports = {
       },
       minify: true,
       // For unknown URLs, fallback to the index page
-      navigateFallback: `${publicUrl  }/index.html`,
+      navigateFallback: `${publicUrl}/index.html`,
       // Ignores URLs starting from /__ (useful for Firebase):
       // https://github.com/facebookincubator/create-react-app/issues/2237#issuecomment-302693219
       navigateFallbackWhitelist: [/^(?!\/__).*/],
