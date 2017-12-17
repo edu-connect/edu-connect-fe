@@ -54,6 +54,8 @@ module.exports = {
     // changing JS code would still trigger a refresh.
   ],
   output: {
+    // Next line is not used in dev but WebpackDevServer crashes without it:
+    path: paths.appBuild,
     // Add /* filename */ comments to generated require()s in the output.
     pathinfo: true,
     // This does not produce a real file. It's just the virtual path that is
@@ -166,8 +168,6 @@ module.exports = {
                 loader: require.resolve("css-loader"),
                 options: {
                   importLoaders: 1,
-                  modules: true,
-                  localIdentName: "[path][name]__[local]--[hash:base64:5]",
                 },
               },
               {
