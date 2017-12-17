@@ -3,7 +3,7 @@
 if [ "$TRAVIS_BRANCH" = "master" ]; then
   echo $TRAVIS_BRANCH
 elif [ "$TRAVIS_BRANCH" = "develop" ]; then
-  echo $TRAVIS_BRANCH
+  curl -X GET http://ec2-13-125-21-21.ap-northeast-2.compute.amazonaws.com:9999/deploy/FE
 elif [ "$TRAVIS_BRANCH" = "feature/*" ]; then
   echo $TRAVIS_BRANCH
 fi
