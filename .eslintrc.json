@@ -15,6 +15,7 @@
   },
   "rules": {
     "no-unused-vars": ["error", { "argsIgnorePattern": "_" }],
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "comma-dangle": ["error", "never"]
   }
 }
