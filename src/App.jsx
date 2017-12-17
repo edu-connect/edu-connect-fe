@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+import Landing from "./pages/landing";
 
 import "./App.css";
 
-const App = _ => <Button className="App">버튼</Button>;
+const App = _ => <Landing />;
 
 export default App;
