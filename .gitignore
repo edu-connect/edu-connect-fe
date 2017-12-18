@@ -239,5 +239,11 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,macos,windows,webstorm,sublimetext,visualstudiocode
-Highlight
-0
+
+# Created by https://www.gitignore.io/api/sass
+
+### Sass ###
+.sass-cache/
+*.css.map
+
+# End of https://www.gitignore.io/api/sass
