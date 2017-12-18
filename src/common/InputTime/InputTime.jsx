@@ -22,9 +22,9 @@ InputTime.propTypes = {
 };
 
 InputTime.defaultProps = {
-  cn: "startTime",
+  cn: "start-time",
   type: "startTime",
-  initValue: moment({ hour: 12 })
+  initValue: moment({ hour: 9 })
 };
 
 export default InputTime;

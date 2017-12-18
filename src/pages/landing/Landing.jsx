@@ -17,8 +17,8 @@ class Landing extends Component {
     super(props);
 
     this.state = {
-      startTime: { hour: 9, minute: 0 },
-      endTime: { hour: 22, minute: 0 }
+      startTime: { hour: null, minute: null },
+      endTime: { hour: null, minute: null }
     };
 
     this.handleInputTime = this.handleInputTime.bind(this);
