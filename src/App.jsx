@@ -1,8 +1,8 @@
 import React from "react";
-import Landing from "./pages/landing";
+import SearchSimpleAddress from "./common/SearchSimpleAddress/SearchSimpleAddress";
 
 import "./App.css";
 
-const App = _ => <Landing />;
+const App = _ => <SearchSimpleAddress />;
 
 export default App;
